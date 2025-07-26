@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Contact | Fresh Labs Detailing</title>
+  <title>Gallery | Fresh Labs Detailing</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -57,26 +57,22 @@
       width: 60px;
       margin: 24px 0;
     }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      box-sizing: border-box;
+    .gallery-img {
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-    button {
-      background-color: #00bfa5;
-      color: white;
-      padding: 14px 28px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #009f90;
+    @media screen and (max-width: 900px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+      .nav-bar a {
+        margin: 10px 0;
+      }
+      .section-box {
+        padding: 40px 30px;
+      }
     }
   </style>
 </head>
@@ -85,33 +81,33 @@
 <!-- Navigation Bar -->
 <div class="nav-bar">
   <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
   <a href="about.html">About</a>
   <a href="packages.html">Packages</a>
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- Contact Form Section -->
+<!-- Gallery Section -->
 <div class="section-box">
-  <h1 class="brand-color">Get In Touch</h1>
+  <h1 class="brand-color"><b>Gallery</b></h1>
   <hr class="divider">
-  <p>We’re here to answer your questions and get your detail scheduled. Drop us a message below!</p>
-
-  <form action="https://formsubmit.co/4ccaecc9156a3f9df3b2521021b2b628" method="POST">
-  <input type="text" name="name" required placeholder="Your Full Name">
-  <input type="email" name="email" required placeholder="Your Email">
-   <input type="car" name="car" required placeholder="Your Car Make & Model">
-  <textarea name="message" required placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
-  <input type="hidden" name="_next" value="thankyou.html">
-  <input type="hidden" name="_template" value="table">
-</form>
-
-
+  <p>Explore the transformations our lab has delivered. These before-and-after shots highlight the precision and pride that define Fresh Labs Detailing.</p>
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-third">
+      <img src="before.jpg" style="width:100%" alt="Before interior" class="gallery-img">
+    </div>
+    <div class="w3-third">
+      <img src="IMG_5830.jpg" style="width:100%" alt="After interior" class="gallery-img">
+    </div>
+    <div class="w3-third">
+      <img src="Coating.jpg" style="width:100%" alt="Gloss finish" class="gallery-img">
+    </div>
+  </div>
 </div>
 
 <!-- Footer -->
 <div class="w3-container w3-padding-32 w3-light-grey" style="text-align:center;">
-  <p>&copy; 2025 Fresh Labs Detailing. Fresh Is a Formula.</p>
+  <p>&copy; 2025 Fresh Labs Detailing. Precision. Protection. Pride.</p>
 </div>
 
 </body>

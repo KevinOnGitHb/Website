@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Contact | Fresh Labs Detailing</title>
+  <title>Thank You | Fresh Labs Detailing</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -28,8 +28,9 @@
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
       margin: 60px auto;
-      max-width: 1100px;
+      max-width: 900px;
       width: 90%;
+      text-align: center;
       box-sizing: border-box;
     }
     .nav-bar {
@@ -55,28 +56,24 @@
       height: 2px;
       background-color: #00bfa5;
       width: 60px;
-      margin: 24px 0;
+      margin: 24px auto;
     }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      box-sizing: border-box;
+    .thank-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
     }
-    button {
-      background-color: #00bfa5;
-      color: white;
-      padding: 14px 28px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #009f90;
+    @media screen and (max-width: 900px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+      .nav-bar a {
+        margin: 10px 0;
+      }
+      .section-box {
+        padding: 40px 30px;
+      }
     }
   </style>
 </head>
@@ -90,23 +87,17 @@
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- Contact Form Section -->
+<!-- Thank You Section -->
 <div class="section-box">
-  <h1 class="brand-color">Get In Touch</h1>
+  <div class="thank-icon">✅</div>
+  <h1 class="brand-color">Thank You!</h1>
   <hr class="divider">
-  <p>We’re here to answer your questions and get your detail scheduled. Drop us a message below!</p>
-
-  <form action="https://formsubmit.co/4ccaecc9156a3f9df3b2521021b2b628" method="POST">
-  <input type="text" name="name" required placeholder="Your Full Name">
-  <input type="email" name="email" required placeholder="Your Email">
-   <input type="car" name="car" required placeholder="Your Car Make & Model">
-  <textarea name="message" required placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
-  <input type="hidden" name="_next" value="thankyou.html">
-  <input type="hidden" name="_template" value="table">
-</form>
-
-
+  <p>We’ve received your message and will get back to you as soon as possible.</p>
+  <!-- <p>If your request is urgent, please don't hesitate to call or text directly.</p> -->
+  <br>
+  <a href="index.html">
+    <button class="brand-bg" style="padding: 14px 28px; border-radius: 8px; font-size: 16px; cursor: pointer;">Back to Home</button>
+  </a>
 </div>
 
 <!-- Footer -->
