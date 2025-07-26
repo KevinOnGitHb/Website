@@ -33,24 +33,62 @@
       text-align: center;
       box-sizing: border-box;
     }
+
+    /* Navigation Bar */
     .nav-bar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       background-color: #00bfa5;
-      padding: 28px 60px;
+      padding: 20px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
-    .nav-bar a {
+    .nav-bar .logo {
       color: white;
-      margin-left: 40px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+    .nav-links a {
+      color: white;
       text-decoration: none;
       font-weight: 600;
       font-size: 20px;
     }
+
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 10px 0;
+      }
+      .section-box {
+        padding: 40px 30px;
+      }
+    }
+
     .divider {
       border: none;
       height: 2px;
@@ -62,18 +100,17 @@
       font-size: 60px;
       margin-bottom: 20px;
     }
-    @media screen and (max-width: 900px) {
-      .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-      .nav-bar a {
-        margin: 10px 0;
-      }
-      .section-box {
-        padding: 40px 30px;
-      }
+    button {
+      background-color: #00bfa5;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #009f90;
     }
   </style>
 </head>
@@ -81,10 +118,14 @@
 
 <!-- Navigation Bar -->
 <div class="nav-bar">
-  <a href="home">Home</a>
-  <a href="about">About</a>
-  <a href="packages">Packages</a>
-  <a href="contact">Contact</a>
+  <div class="logo">Fresh Labs</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </div>
 
 <!-- Thank You Section -->
@@ -93,10 +134,9 @@
   <h1 class="brand-color">Thank You!</h1>
   <hr class="divider">
   <p>We’ve received your message and will get back to you as soon as possible.</p>
-  <!-- <p>If your request is urgent, please don't hesitate to call or text directly.</p> -->
   <br>
   <a href="index.html">
-    <button class="brand-bg" style="padding: 14px 28px; border-radius: 8px; font-size: 16px; cursor: pointer;">Back to Home</button>
+    <button>Back to Home</button>
   </a>
 </div>
 
@@ -104,6 +144,13 @@
 <div class="w3-container w3-padding-32 w3-light-grey" style="text-align:center;">
   <p>&copy; 2025 Fresh Labs Detailing. Fresh Is a Formula.</p>
 </div>
+
+<!-- Toggle Script -->
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
