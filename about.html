@@ -33,13 +33,14 @@
       box-sizing: border-box;
     }
 
+    
     /* Navigation Bar */
     .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #00bfa5;
-      padding: 20px 30px;
+      padding: 24px 40px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -48,24 +49,28 @@
     .nav-bar .logo {
       color: white;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 26px;
     }
     .menu-toggle {
       display: none;
-      font-size: 28px;
+      font-size: 32px;
       color: white;
       cursor: pointer;
     }
     .nav-links {
       display: flex;
-      gap: 40px;
+      gap: 50px;
     }
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 22px;
     }
+    a:hover {
+      text-decoration: underline;
+    }
+
 
     @media screen and (max-width: 768px) {
       .menu-toggle {

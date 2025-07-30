@@ -11,7 +11,7 @@
       font-family: 'Outfit', sans-serif;
     }
     body {
-      font-size: 18px;
+      font-size: 20px;
       background-color: #f7f7f7;
       margin: 0;
     }
@@ -24,12 +24,12 @@
     }
     .section-box {
       background: white;
-      padding: 60px 80px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-      margin: 60px auto;
-      max-width: 1100px;
-      width: 90%;
+      padding: 80px 100px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      margin: 80px auto;
+      max-width: 1200px;
+      width: 92%;
       box-sizing: border-box;
     }
     .hero {
@@ -62,23 +62,21 @@
       padding: 20px;
     }
     .hero h1 {
-      font-size: 70px;
+      font-size: 86px;
       font-weight: 800;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .callout {
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 300;
       color: #080808;
     }
-
-    /* Responsive Nav */
     .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #00bfa5;
-      padding: 20px 30px;
+      padding: 24px 40px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -87,23 +85,54 @@
     .nav-bar .logo {
       color: white;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 26px;
     }
     .menu-toggle {
       display: none;
-      font-size: 28px;
+      font-size: 32px;
       color: white;
       cursor: pointer;
     }
     .nav-links {
       display: flex;
-      gap: 40px;
+      gap: 50px;
     }
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 22px;
+    }
+    .divider {
+      border: none;
+      height: 3px;
+      background-color: #00bfa5;
+      width: 80px;
+      margin: 30px 0;
+    }
+    .feature-box {
+      text-align: center;
+      padding: 30px;
+    }
+    .feature-box h3 {
+      color: #00bfa5;
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+    .service-icon {
+      font-size: 42px;
+      margin-bottom: 14px;
+    }
+    a {
+      color: #00bfa5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .w3-row-padding img {
+      border-radius: 14px;
     }
     @media screen and (max-width: 768px) {
       .menu-toggle {
@@ -119,174 +148,102 @@
         display: flex;
       }
       .nav-links a {
-        padding: 10px 0;
+        padding: 12px 0;
+        font-size: 20px;
       }
-    }
-
-    .divider {
-      border: none;
-      height: 2px;
-      background-color: #00bfa5;
-      width: 60px;
-      margin: 24px 0;
-    }
-    .feature-box {
-      text-align: center;
-      padding: 20px;
-    }
-    .feature-box h3 {
-      color: #00bfa5;
-      font-weight: 600;
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-    .w3-row-padding img {
-      border-radius: 12px;
-    }
-    a {
-      color: #00bfa5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .service-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
+      .section-box {
+        padding: 60px 30px;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- Navigation Bar -->
-<div class="nav-bar">
-  <div class="logo">Fresh Labs</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
-    <a href="home">Home</a>
-    <a href="about">About</a>
-    <a href="packages">Packages</a>
-    <a href="contact">Contact</a>
-  </div>
-</div>
-
-<!-- Hero Section -->
-<div class="hero">
-  <div class="hero-content">
-    <h1>Fresh Labs Detailing</h1>
-    <p class="callout">Fresh Is a Formula.</p>
-  </div>
-</div>
-
-<!-- Welcome Section -->
-<div class="section-box">
-  <h1 class="brand-color"><b>Why Fresh Labs?</b></h1>
-  <hr class="divider">
-  <p>At Fresh Labs Detailing, we combine cutting-edge products and expert technique to give your car the clinical refresh it deserves. With lab-like precision and a fresh, modern approach, we go beyond clean — we deliver clarity, protection, and pride.</p>
-</div>
-
-<!-- Features Section -->
-<div class="section-box">
-  <h1 class="brand-color"><b>Our Formula</b></h1>
-  <hr class="divider">
-  <div class="w3-row-padding">
-    <div class="w3-third feature-box">
-      <h3>🧪 Interior Science</h3>
-      <p>Deep sanitization, steam cleaning, and smart scent balancing — we refresh where others wipe.</p>
-    </div>
-    <div class="w3-third feature-box">
-      <h3>🔬 Surface Engineering</h3>
-      <p>From paint correction to ceramic application, we restore your vehicle’s surface on a molecular level.</p>
-    </div>
-    <div class="w3-third feature-box">
-      <h3>🚙 Mobile Lab</h3>
-      <p>Our mobile units bring precision and polish right to your driveway or office parking lot.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Services Section -->
-<div class="section-box">
-  <h1 class="brand-color"><b>Our Services</b></h1>
-  <hr class="divider">
-  <p>We provide a wide range of detailing options to meet your needs. Choose the services that best suit your car's condition and your personal preferences.</p>
-
-  <div class="w3-row-padding w3-margin-top">
-    <div class="w3-third w3-center">
-      <div class="service-icon">🧼</div>
-      <h3>Interior Detailing</h3>
-      <p>Vacuum, shampoo, leather treatment, and odor removal. Your interior will feel brand new.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <div class="service-icon">✨</div>
-      <h3>Exterior Wash & Wax</h3>
-      <p>Thorough hand wash and protective wax layer for a lasting shine.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <div class="service-icon">🛡️</div>
-      <h3>Ceramic Coating</h3>
-      <p>Advanced protection for your paint, resisting dirt and water for months.</p>
+  <div class="nav-bar">
+    <div class="logo">Fresh Labs</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="home">Home</a>
+      <a href="about">About</a>
+      <a href="packages">Packages</a>
+      <a href="contact">Contact</a>
     </div>
   </div>
 
-  <div class="w3-row-padding w3-margin-top">
-    <div class="w3-third w3-center">
-      <div class="service-icon">🔧</div>
-      <h3>Engine Bay Detail</h3>
-      <p>Degrease and dress your engine bay to a clean, like-new appearance.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <div class="service-icon">🧽</div>
-      <h3>Paint Correction</h3>
-      <p>Remove scratches, swirls, and blemishes for a mirror-like finish.</p>
-    </div>
-    <div class="w3-third w3-center">
-      <div class="service-icon">🚙</div>
-      <h3>Mobile Detailing</h3>
-      <p>We come to you! Book a service at your home or office.</p>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Fresh Labs Detailing</h1>
+      <p class="callout">Fresh Is a Formula.</p>
     </div>
   </div>
-</div>
 
-<!-- Gallery Preview -->
-<div class="section-box">
-  <h1 class="brand-color"><b>Lab Results</b></h1>
-  <hr class="divider">
-  <p>Here's a glimpse at the transformations happening every day with Fresh Labs:</p>
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <img src="before.jpg" style="width:100%" alt="Before interior">
-    </div>
-    <div class="w3-third">
-      <img src="IMG_5830.jpg" style="width:100%" alt="After interior">
-    </div>
-    <div class="w3-third">
-      <img src="Coating.jpg" style="width:100%" alt="Gloss finish">
+  <div class="section-box">
+    <h1 class="brand-color"><b>Why Fresh Labs?</b></h1>
+    <hr class="divider">
+    <p>At Fresh Labs Detailing, we combine cutting-edge products and expert technique to give your car the clinical refresh it deserves. With lab-like precision and a fresh, modern approach, we go beyond clean — we deliver clarity, protection, and pride.</p>
+  </div>
+
+  <div class="section-box">
+    <h1 class="brand-color"><b>Our Services</b></h1>
+    <hr class="divider">
+    <p>We provide a wide range of detailing options to meet your needs. Choose the services that best suit your car's condition and your personal preferences.</p>
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-half w3-center" style="margin-bottom:40px;">
+        <div class="service-icon">🧼</div>
+        <h3>Interior Detailing</h3>
+        <p>Vacuum, shampoo, leather treatment, and odor removal. Your interior will feel brand new.</p>
+      </div>
+      <div class="w3-half w3-center" style="margin-bottom:40px;">
+        <div class="service-icon">✨</div>
+        <h3>Exterior Wash & Wax</h3>
+        <p>Thorough hand wash and protective wax layer for a lasting shine.</p>
+      </div>
+      <div class="w3-half w3-center" style="margin-bottom:40px;">
+        <div class="service-icon">🔧</div>
+        <h3>Engine Bay Detail</h3>
+        <p>Degrease and dress your engine bay to a clean, like-new appearance.</p>
+      </div>
+      <div class="w3-half w3-center" style="margin-bottom:40px;">
+        <div class="service-icon">🚙</div>
+        <h3>Mobile Detailing</h3>
+        <p>We come to you! Book a service at your home or office!</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- CTA -->
-<div class="section-box" style="text-align:center">
-  <h2 class="brand-color">Book Your Detail Today</h2>
-  <hr class="divider">
-  <p class="callout">Let Fresh Labs bring your car back to its purest state. Explore our <a href="packages.html">Packages</a> or <a href="contact.html">get in touch</a> for a custom consultation.</p>
-  <a href="contact">
-    <button class="w3-button brand-bg w3-padding-large w3-margin-top w3-hover-black">Schedule now!</button>
-  </a>
-</div>
+  <div class="section-box">
+    <h1 class="brand-color"><b>Lab Results</b></h1>
+    <hr class="divider">
+    <p>Here's a glimpse at the transformations happening every day with Fresh Labs:</p>
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <img src="before.jpg" style="width:100%" alt="Before interior">
+      </div>
+      <div class="w3-third">
+        <img src="IMG_5830.jpg" style="width:100%" alt="After interior">
+      </div>
+      <div class="w3-third">
+        <img src="Coating.jpg" style="width:100%" alt="Gloss finish">
+      </div>
+    </div>
+  </div>
 
-<!-- Footer -->
-<div class="w3-container w3-padding-32 w3-light-grey" style="text-align:center;">
-  <p>&copy; 2025 Fresh Labs Detailing. Fresh Is a Formula.</p>
-</div>
+  <div class="section-box" style="text-align:center">
+    <h2 class="brand-color">Book Your Detail Today</h2>
+    <hr class="divider">
+    <p class="callout">Let Fresh Labs bring your car back to its purest state. Explore our <a href="packages.html">Packages</a> or <a href="contact.html">get in touch</a> for a custom consultation.</p>
+    <a href="contact">
+      <button class="w3-button brand-bg w3-padding-large w3-margin-top w3-hover-black">Schedule now!</button>
+    </a>
+  </div>
 
-<!-- JavaScript for Mobile Nav Toggle -->
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
+  <div class="w3-container w3-padding-32 w3-light-grey" style="text-align:center;">
+    <p>&copy; 2025 Fresh Labs Detailing. Fresh Is a Formula.</p>
+  </div>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
