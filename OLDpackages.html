@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Packages | Fresh Labs Detailing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Outfit:wght@300;600;800&display=swap">
+  <style>
+    body, h1, h2, h3, h4, h5 {
+      font-family: 'Outfit', sans-serif;
+    }
+    body {
+      font-size: 18px;
+      background-color: #f7f7f7;
+      margin: 0;
+    }
+    .brand-color {
+      color: #00bfa5;
+    }
+    .brand-bg {
+      background-color: #00bfa5;
+      color: white;
+    }
+    .section-box {
+      background: white;
+      padding: 60px 80px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      margin: 60px auto;
+      max-width: 1100px;
+      width: 90%;
+      box-sizing: border-box;
+    }
+
+    
+    /* Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #00bfa5;
+      padding: 24px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    .nav-bar .logo {
+      color: white;
+      font-weight: 700;
+      font-size: 26px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: flex;
+      gap: 50px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 22px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Nav */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 10px 0;
+      }
+    }
+
+    .divider {
+      border: none;
+      height: 2px;
+      background-color: #00bfa5;
+      width: 80px;
+      margin: 30px 0;
+    }
+    .package-card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 30px;
+      text-align: left;
+      transition: transform 0.2s ease;
+    }
+    .package-card:hover {
+      transform: translateY(-6px);
+    }
+    .package-header {
+      font-size: 24px;
+      font-weight: 700;
+      color: #00bfa5;
+      margin-bottom: 15px;
+    }
+    .package-section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 25px 0 10px;
+      color: #222;
+    }
+    .base-price {
+      color: #333;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .label-bold {
+      font-weight: 600;
+    }
+    .package-button {
+      background-color: #00bfa5;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .package-button:hover {
+      background-color: #009e8f;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="nav-bar">
+  <div class="logo">Fresh Labs</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="home">Home</a>
+    <a href="about">About</a>
+    <a href="packages">Packages</a>
+    <a href="contact">Contact</a>
+  </div>
+</div>
+
+<!-- Package Section -->
+<div class="section-box">
+  <h2 class="brand-color">Choose Your Detail Package</h2>
+  <hr class="divider">
+  <p style="text-align:center; max-width:800px; margin:auto;">At Fresh Labs, our packages are designed with precision and simplicity. Whether you want a light refresh or a full ceramic shield, there's a plan tailored for your vehicle’s needs.</p>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; margin-top: 48px;">
+    <!-- Exterior Services -->
+    <div class="package-card" style="flex: 1 1 320px; max-width: 400px;">
+      <div class="package-header">Exterior Services</div>
+      <div class="package-section-title">Motorcycles / Sedans</div>
+      <div class="base-price">Base Wash: $35</div>
+      <div class="price-row"><span>+ Wax (Clay & Sealant)</span><span>+$30</span></div>
+      <div class="price-row"><span>+ Tire Shine</span><span>+$10</span></div>
+      <div class="package-section-title">SUV / Vans / Truck</div>
+      <div class="base-price">Base Wash: $45</div>
+      <div class="price-row"><span>+ Wax (Clay & Sealant)</span><span>+$40</span></div>
+      <div class="price-row"><span>+ Tire Shine</span><span>+$10</span></div>
+    </div>
+
+    <!-- Plus Sign -->
+    <div style="font-size: 36px; font-weight: bold; color: #00bfa5;">+</div>
+
+    <!-- Interior Services -->
+    <div class="package-card" style="flex: 1 1 320px; max-width: 400px;">
+      <div class="package-header">Interior Services</div>
+      <div class="package-section-title">Motorcycles / Sedans</div>
+      <div class="base-price">Quick Interior Clean: $30</div>
+      <div class="price-row"><span>+ Pet Hair Removal</span><span>+$20</span></div>
+      <div class="price-row"><span>+ Engine Bay Cleaning</span><span>+$30</span></div>
+      <div class="package-section-title">SUV / Vans / Truck</div>
+      <div class="base-price">Quick Interior Clean: $40</div>
+      <div class="price-row"><span>+ Pet Hair Removal</span><span>+$30</span></div>
+      <div class="price-row"><span>+ Engine Bay Cleaning</span><span>+$30</span></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="contact" target="_blank">
+      <button class="package-button">Book Your Detail Now</button>
+    </a>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="w3-container w3-padding-32 w3-light-grey" style="text-align:center;">
+  <p>&copy; 2025 Fresh Labs Detailing. Fresh Is a Formula.</p>
+</div>
+
+<!-- JavaScript for Mobile Nav Toggle -->
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>
