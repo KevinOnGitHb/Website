@@ -22,6 +22,12 @@
       background-color: #00bfa5;
       color: white;
     }
+    .hero h1 {
+      font-size: 86px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
     .section-box {
       background: white;
       padding: 60px 40px;
@@ -135,23 +141,42 @@
       background-color: #f0f0f0;
       color: #333;
     }
+    .package-button {
+      background-color: #00bfa5;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .package-button:hover {
+      background-color: #009e8f;
+    }
+
   </style>
 </head>
 <body>
 
+<!-- Updated HTML snippet with logo image in navbar -->
 <div class="nav-bar">
-  <div class="logo">Fresh Labs</div>
+  <div class="logo" style="display: flex; align-items: center; gap: 5px;">
+    <img src="images/WebsiteLogo.png" alt="Logo" style="height: 60px;">
+    <!-- Fresh Labs -->
+  </div>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <div class="nav-links" id="navLinks">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Packages</a>
-    <a href="#">Contact</a>
+    <a href="home">Home</a>
+    <a href="about">About</a>
+    <a href="packages">Packages</a>
+    <a href="contact">Contact</a>
   </div>
 </div>
 
+
 <div class="section-box">
-  <h2 class="brand-color">Choose Your Detail Package</h2>
+  <h1 class="brand-color">Choose Your Detail Package</h1>
   <hr class="divider">
   <div class="packages-row">
     <div class="package-card">
@@ -230,6 +255,14 @@
       </ul>
     </div>
   </div>
+  
+    <div style="text-align:center;">
+    <a href="contact" target="_blank">
+      <button class="package-button">Book Your Detail Now</button>
+    </a>
+  </div>
+</div>
+
 </div>
 
 <div class="footer">
